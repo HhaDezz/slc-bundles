@@ -27,16 +27,15 @@
             boxShadow: {
               soft: "0 4px 24px rgba(0,0,0,0.06)",
             },
+            fontFamily: {
+             'jost': ['Jost', 'sans-serif']
+            },
           },
         },
       };
     </script>
 
     <style>
-      body {
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
-      }
       .clip-diagonal {
         clip-path: polygon(0 100%, 100% 100%, 100% 0);
       }
@@ -53,7 +52,7 @@
       }
     </style>
   </head>
-  <body class="bg-[#fafbfc] text-[#1a1a1a]">
+  <body class="bg-[#fafbfc] text-[#1a1a1a] font-family-jost">
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-[#fff]">
       <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -311,7 +310,7 @@
       </section>
 
       <!-- Assistance CTA -->
-           <section class="mt-10 sm:mt-16">
+      <section class="mt-10 sm:mt-16">
         <div
           class="max-w-7xl mx-4 xl:mx-auto rounded-xl py-10 lg:py-14 bg-cover bg-center"
           style="
