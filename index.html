@@ -421,64 +421,52 @@ echo "</pre>";
     </section>
 
     <!-- Features Section -->
-    <section class="max-w-7xl mx-auto px-6 py-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
-        Our distinct qualities set us apart from others.
-      </h2>
+<section class="max-w-7xl mx-auto px-6 py-20 bg-white rounded-2xl">
+  <h2 class="text-4xl md:text-5xl text-center mb-16 [font-family:'Glowkin_Demo',sans-serif]">
+    Our distinct qualities set us apart<br class="hidden md:block"> from others.
+  </h2>
 
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center text-3xl"
-          >
-            🎓
-          </div>
-          <h3 class="font-bold text-xl mb-2">Accredited Qualifications</h3>
-          <p class="text-gray-600">
-            Recognised diplomas & certificates that boost your career prospects.
-          </p>
-        </div>
-        <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-3xl"
-          >
-            💼
-          </div>
-          <h3 class="font-bold text-xl mb-2">Industry-Relevant Skills</h3>
-          <p class="text-gray-600">
-            Curriculum designed with input from industry experts and employers.
-          </p>
-        </div>
-        <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center text-3xl"
-          >
-            📚
-          </div>
-          <h3 class="font-bold text-xl mb-2">Flexible Learning</h3>
-          <p class="text-gray-600">
-            Self-paced study with tutor support whenever you need it.
-          </p>
-        </div>
-        <div class="text-center">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center text-3xl"
-          >
-            💰
-          </div>
-          <h3 class="font-bold text-xl mb-2">Exceptional Value</h3>
-          <p class="text-gray-600">
-            Save more with curated bundles that offer your full learning path.
-          </p>
-        </div>
-      </div>
-    </section>
+  <div class="grid md:grid-cols-4 gap-12 md:divide-x divide-gray-200">
+    <div class="text-center px-6">
+      <img src="https://southlondoncollege.org/wp-content/uploads/2025/11/Earth-Care.png" alt="Accredited Qualifications" class="w-14 h-14 mx-auto mb-6" />
+      <h3 class="font-semibold text-lg mb-2">Accredited Qualifications</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Recognised diplomas & certificates that boost your career prospects.
+      </p>
+    </div>
+
+    <div class="text-center px-6">
+      <img src="https://southlondoncollege.org/wp-content/uploads/2025/11/Willingness-To-Learn.png" alt="Industry-Relevant Skills" class="w-14 h-14 mx-auto mb-6" />
+      <h3 class="font-semibold text-lg mb-2">Industry-Relevant Skills</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Curriculum designed with input from industry experts and employers.
+      </p>
+    </div>
+
+    <div class="text-center px-6">
+      <img src="https://southlondoncollege.org/wp-content/uploads/2025/11/Working-With-a-Laptop.png" alt="Flexible Learning" class="w-14 h-14 mx-auto mb-6" />
+      <h3 class="font-semibold text-lg mb-2">Flexible Learning</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Self-paced online study with tutor support whenever you need it.
+      </p>
+    </div>
+
+    <div class="text-center px-6">
+      <img src="https://southlondoncollege.org/wp-content/uploads/2025/11/Graph.png" alt="Exceptional Value" class="w-14 h-14 mx-auto mb-6" />
+      <h3 class="font-semibold text-lg mb-2">Exceptional Value</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Save more with curated bundles that cover your full learning path.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Support Section -->
     <section class="max-w-4xl mx-auto px-6 py-16">
       <div class="bg-[#fef3e8] rounded-3xl p-12 text-center">
         <p class="text-sm uppercase tracking-wide mb-2">Need Assistance?</p>
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <h2 class="text-4xl md:text-5xl mb-6 [font-family:'Glowkin_Demo',sans-serif]">
           We're Here to Help 24/7
         </h2>
         <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -487,10 +475,13 @@ echo "</pre>";
         </p>
         <div class="flex justify-center gap-4">
           <button
-            class="px-8 py-3 bg-orange-400 text-white rounded-full hover:bg-orange-500 flex items-center gap-2"
-          >
-            📞 Call us now
-          </button>
+                class="relative px-9 py-3 font-semibold bg-black text-black text-sm border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
+              >
+                <span
+                  class="absolute inset-0 bg-[#FF9B42] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#FFF200]"
+                ></span>
+                <span class="relative z-10">Call us now</span>
+              </button>
           <button
             class="px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-white"
           >
