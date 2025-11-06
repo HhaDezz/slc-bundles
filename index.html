@@ -247,7 +247,7 @@ echo "</pre>";
 
     <!-- Hero Section -->
     <section>
-      <div class="bg-[#DADADA] [font-family:'Bricolage_Grotesque']">
+      <div class="bg-[#FEF4EB] [font-family:'Bricolage_Grotesque']">
         <div
           class="flex flex-col lg:flex-row items-center justify-between max-w-full mx-auto p-6 lg:p-28"
         >
@@ -274,10 +274,10 @@ echo "</pre>";
             <p class="text-gray-700 text-xl"></p>
             <div class="flex gap-4 pt-4">
               <button
-                class="relative px-9 py-4 font-semibold bg-black text-white text-2xl border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
+                class="relative px-9 py-4 font-semibold bg-black text-black text-2xl border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
               >
                 <span
-                  class="absolute inset-0 bg-[#00A473] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#3AE6B3]"
+                  class="absolute inset-0 bg-[#FF9B42] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#3AE6B3]"
                 ></span>
                 <span class="relative z-10">Explore Courses</span>
               </button>
@@ -295,7 +295,7 @@ echo "</pre>";
           <div class="relative mt-10 lg:mt-0 hidden lg:block">
             <!-- Countdown Timer -->
             <div
-              class="bg-[#F3BF92] p-8 rounded-[2rem] shadow-inner flex flex-col items-center"
+              class="bg-[#FFE176] p-8 rounded-[2rem] shadow-inner flex flex-col items-center"
             >
               <p class="text-2xl font-bold mb-6 italic text-gray-800">
                 Offer ends in:
@@ -1276,52 +1276,50 @@ echo "</pre>";
         <div class="flex items-center gap-3 flex-wrap">
           <img
             src="https://southlondoncollege.org/wp-content/uploads/2025/11/Frame-2610904.png"
-            alt="Pearson BTEC"
             class="h-11 object-contain"
           />
           <img
             src="https://southlondoncollege.org/wp-content/uploads/2025/11/Frame-2610903.png"
-            alt="Quality Licence Scheme"
             class="h-11 object-contain"
           />
           <img
             src="https://southlondoncollege.org/wp-content/uploads/2025/11/Frame-2610902.png"
-            alt="ATHE"
             class="h-11 object-contain"
           />
         </div>
       </div>
 
       <!-- Prices -->
-      <div class="flex items-baseline gap-2 mb-6">
+      <div class="flex items-center gap-2 mb-2">
         <span class="text-4xl font-bold">${bundle.price}</span>
-        <span
-          class="text-white bg-[#00A473] px-3 py-2 rounded-full font-semibold"
-          >${bundle.savings}</span
-        >
+        <span class="text-white bg-[#00A473] px-3 py-1.5 rounded-full font-semibold text-sm">
+          ${bundle.savings}
+        </span>
       </div>
-      <div class="text-gray-400 line-through mb-6">
+      <div class="text-gray-500 line-through mb-6">
         ${bundle.originalPrice}
       </div>
     </div>
 
-     <div class="flex gap-3 mt-auto">
-  <a
-    href="${bundle.url}"
-    target="_blank"
-    class="flex-1 text-center bg-black text-white py-3 rounded-[10px] hover:bg-gray-800 transition font-semibold"
-  >
-    Enquire now →
-  </a>
-  <a
-    href="#"
-    class="flex-1 text-center border-2 border-gray-900 py-3 rounded-[10px] hover:bg-gray-50 transition font-semibold"
-  >
-    Learn more
-  </a>
-</div>
+    <!-- Buttons -->
+    <div class="flex gap-3 mt-auto">
+      <a
+        href="${bundle.url}"
+        target="_blank"
+        class="flex-1 text-center bg-black text-white py-3 rounded-[10px] hover:bg-gray-800 transition font-semibold"
+      >
+        Buy now →
+      </a>
+      <a
+        href="#"
+        class="flex-1 text-center border-2 border-gray-900 py-3 rounded-[10px] hover:bg-gray-50 transition font-semibold"
+      >
+        Customise Yours
+      </a>
+    </div>
   </div>
 </div>
+
 
             `
           )
