@@ -272,17 +272,17 @@ echo "</pre>";
               Start your mastery journey now!
             </p>
             <p class="text-gray-700 text-xl"></p>
-            <div class="flex gap-4 pt-4">
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+             <button
+            class="relative px-9 py-4 font-semibold bg-black text-black text-xl border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
+          >
+            <span
+              class="absolute inset-0 bg-[#FF9B42] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#3AE6B3]"
+            ></span>
+            <span class="relative z-10">Explore Courses</span>
+          </button>
               <button
-                class="relative px-9 py-4 font-semibold bg-black text-black text-2xl border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
-              >
-                <span
-                  class="absolute inset-0 bg-[#FF9B42] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#3AE6B3]"
-                ></span>
-                <span class="relative z-10">Explore Courses</span>
-              </button>
-              <button
-                class="group relative px-7 py-4 font-semibold text-black text-2xl border-[3px] border-black rounded-full overflow-hidden before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:h-0 before:w-0 before:rounded-full before:bg-[#626262] before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-60 hover:before:w-60"
+                class="group relative px-7 py-4 font-semibold text-black text-xl border-[3px] border-black rounded-full overflow-hidden before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:h-0 before:w-0 before:rounded-full before:bg-[#626262] before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-60 hover:before:w-60"
               >
                 <span class="relative z-10">Talk to an expert</span>
                 <span
@@ -366,6 +366,76 @@ echo "</pre>";
               </div>
             </div>
           </div>
+
+           <div class="relative mt-10 lg:mt-0 w-full flex justify-center lg:hidden">
+        <div
+          class="bg-[#FFE176] p-6 sm:p-8 rounded-[2rem] shadow-inner flex flex-col items-center w-full max-w-md"
+        >
+          <p class="text-xl sm:text-2xl font-bold mb-6 italic text-gray-800">
+            Offer ends in:
+          </p>
+          <div
+            class="flex justify-center gap-4 sm:gap-6 items-center"
+            id="countdown"
+          >
+            <!-- Days -->
+            <div class="text-center">
+              <div
+                id="days"
+                class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+              >
+                06
+              </div>
+              <p class="mt-3 text-sm font-semibold text-gray-800">Days</p>
+            </div>
+
+            <div class="text-2xl sm:text-4xl font-bold text-gray-800 self-center">
+              :
+            </div>
+
+            <!-- Hours -->
+            <div class="text-center">
+              <div
+                id="hours"
+                class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+              >
+                12
+              </div>
+              <p class="mt-3 text-sm font-semibold text-gray-800">Hours</p>
+            </div>
+
+            <div class="text-2xl sm:text-4xl font-bold text-gray-800 self-center">
+              :
+            </div>
+
+            <!-- Minutes -->
+            <div class="text-center">
+              <div
+                id="minutes"
+                class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+              >
+                20
+              </div>
+              <p class="mt-3 text-sm font-semibold text-gray-800">Minutes</p>
+            </div>
+
+            <div class="text-2xl sm:text-4xl font-bold text-gray-800 self-center">
+              :
+            </div>
+
+            <!-- Seconds -->
+            <div class="text-center">
+              <div
+                id="seconds"
+                class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+              >
+                20
+              </div>
+              <p class="mt-3 text-sm font-semibold text-gray-800">Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </section>
