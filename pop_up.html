@@ -1,0 +1,268 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://southlondoncollege.org/wp-content/uploads/2020/11/favico-50px.png"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <title>Course Bundles - South London College</title>
+    <meta
+      name="description"
+      content="Enjoy special discounts and gain certifications from leading awarding bodies in Health and Childcare, Business Management, and more."
+      class="yoast-seo-meta-tag"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+     <!-- fonts -->
+      <link
+        href="https://fonts.cdnfonts.com/css/glowkin-demo"
+        rel="stylesheet"
+      />
+      <link href="https://fonts.cdnfonts.com/css/rintjany" rel="stylesheet" />
+      <link
+        href="https://fonts.cdnfonts.com/css/bricolage-grotesque"
+        rel="stylesheet"
+      />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slc: {
+                primary: "#0AA4BD",
+                primaryDark: "#088ca3",
+                accent: "#FF6B35",
+              },
+            },
+            boxShadow: {
+              soft: "0 4px 24px rgba(0,0,0,0.06)",
+            },
+          },
+        },
+      };
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "about": "Discount codes, coupons, and promotional offers for online courses",
+        "keywords": [
+          "apply for coupons",
+          "sale codes",
+          "valid discount codes",
+          "student coupons",
+          "health care discounts",
+          "courses for servers promo code",
+          "university discounts",
+          "valid promo codes",
+          "discount offers",
+          "discount code uk",
+          "discount promotions",
+          "christmas promo code",
+          "discounts and coupons",
+          "online voucher codes",
+          "online codes",
+          "coupon offers",
+          "next discount code uk",
+          "discount vouchers online",
+          "student promo code",
+          "coupon voucher",
+          "apply discount code",
+          "black friday discount codes",
+          "coupons and vouchers",
+          "use code for discount",
+          "voucher codes co uk",
+          "coupons for sale",
+          "free now code promo",
+          "promo code on",
+          "apply coupon",
+          "discount codes that actually work",
+          "discount courses",
+          "coupons and codes",
+          "voucher promo code",
+          "use promo code",
+          "coupon cashback",
+          "coupon promotion",
+          "free promos",
+          "fridays discount code",
+          "friday coupons",
+          "on promo code uk",
+          "discount today promo code",
+          "use discount code",
+          "find me a discount code",
+          "checkout promo code",
+          "give me promo code",
+          "online coupons uk",
+          "levels health promo code",
+          "discount code terms and conditions",
+          "voucher free now",
+          "black friday courses",
+          "vouchercode uk",
+          "paypal promo",
+          "care coupon",
+          "get coupon",
+          "all black promo code",
+          "student discount offers",
+          "deal codes",
+          "shopping codes uk",
+          "yours coupon code",
+          "get free vouchers",
+          "out and out voucher code",
+          "health care discount"
+        ]
+      }
+    </script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .modal {
+        transition: opacity 0.3s ease;
+      }
+
+      .modal.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .countdown-digit {
+        background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+        border-radius: 8px;
+        padding: 12px 16px;
+        min-width: 70px;
+      }
+
+      .course-link {
+        cursor: pointer;
+        transition: color 0.2s ease;
+      }
+
+      .course-link:hover {
+        color: #f97316;
+        text-decoration: underline;
+      }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TFMVPF4");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="[font-family:'Bricolage_Grotesque']">
+   <div class="bg-gradient-to-r from-orange-400 to-red-400 -m-8 mb-6 p-8 rounded-t-3xl">
+                    <h2 class="text-white font-bold text-2xl md:text-3xl pr-8">${course.title}</h2>
+                    <p class="text-white/90 mt-2 text-sm">${details.category}</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- Course Description -->
+                    <div class="bg-blue-50 p-4 rounded-xl border-l-4 border-blue-400">
+                        <p class="text-gray-700 leading-relaxed">${course.description}</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-xl mb-4">What's Included</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">🎓</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Certificate</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.certificate}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">🏆</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Awarded By</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.awardedBy}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">⏱️</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Learning Hours</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.learningHours}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">✏️</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Credits</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.credits}</p>
+                                </div>
+                            </div>
+                            <!-- <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">📚</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Modules</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.modules}</p>
+                                </div>
+                            </div> -->
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">📖</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Course Material</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.materials}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">👨‍🏫</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Tutor Support</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.tutorSupport}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                                <span class="text-2xl">📅</span>
+                                <div>
+                                    <p class="font-semibold text-sm text-gray-500">Duration</p>
+                                    <p class="text-sm text-gray-800 mt-1">${details.duration}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTAs: Learn more and Need Help? -->
+                    <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-2xl border-2 border-gray-200">
+                        <div class="flex gap-3">
+                            <a href="${course.url}" class="flex-1 bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition font-semibold text-center">
+                                Learn more →
+                            </a>
+                            <button onclick="handleNeedHelp()" class="flex-1 border-2 border-gray-900 py-3 px-6 rounded-full hover:bg-white transition font-semibold">
+                                Need Help?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+  </body>
+</html>
+

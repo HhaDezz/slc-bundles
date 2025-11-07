@@ -386,34 +386,34 @@ echo "</pre>";
       <div class="flex flex-wrap justify-center gap-4 mb-12 text-sm">
         <button
           class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
-          data-category="all"
+          data-category="health"
         >
           Health & Social Care
         </button>
-        <button
+        <!-- <button
           class="px-3 py-2 bg-orange-100 border-2 border-orange-400 rounded-lg"
           data-category="business"
         >
           Business & Management
-        </button>
-        <button
+        </button> -->
+        <!-- <button
           class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
           data-category="accounting"
         >
           Accounting & Finance
-        </button>
+        </button> -->
         <button
           class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
           data-category="teaching"
         >
           Teaching & Education
         </button>
-        <button
+        <!-- <button
           class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
           data-category="law"
         >
           Law & Ethics Matters
-        </button>
+        </button> -->
       </div>
 
       <!-- Course Cards Grid -->
@@ -668,13 +668,17 @@ echo "</pre>";
           originalPrice: "£1,178.00",
           savings: "Save £819",
           awardingBodies: ["Pearson BTEC", "Quality Licence Scheme", "ATHE"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache:
+            "https://southlondoncollege.org/wp-content/uploads/2024/07/cil-logo-ncfe-cache.png",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121891",
           courses: [
             {
               id: "course_1",
               title:
                 "Level 3 Certificate in Preparing to Work in Adult Social Care",
-              url: "/course/level-3-certificate-in-preparing-to-work-in-adult-social-care/",
+              url: "https://southlondoncollege.org/course/level-3-certificate-in-preparing-to-work-in-adult-social-care/",
               description: "Adultcare Foundation,Comfort at end of life",
               details: {
                 category: "health",
@@ -692,7 +696,7 @@ echo "</pre>";
               id: "course_2",
               title:
                 "Level 3 Certificate in the Principles of End of Life Care (RQF)",
-              url: "/courses/level-3-end-of-life-care",
+              url: "https://southlondoncollege.org/course/ncfe-cache-level-3-certificate-principles-end-life-care/",
               description:
                 "Understand the key principles of providing compassionate end of life care, supporting individuals and families through sensitive and challenging times.",
               details: {
@@ -717,16 +721,19 @@ echo "</pre>";
           originalPrice: "£2,578",
           savings: "Save £1,629",
           awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121895",
           courses: [
             {
               id: "course_3",
               title: "Level 4 Diploma in Adult Care",
-              url: "/course/level-4-diploma-in-adult-care/",
+              url: "https://southlondoncollege.org/course/level-4-diploma-in-adult-care/",
               description: "Leadership in care",
               details: {
                 category: "health",
-                certificate: "Diploma Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards ",
                 learningHours: "514 Guided Learning Hours(GLH)",
                 credits: "70 Credits",
@@ -740,11 +747,11 @@ echo "</pre>";
               id: "course_4",
               title:
                 "Level 5 Diploma in Leading and Managing an Adult Care Service (RQF)",
-              url: "/course/level-5-diploma-in-leadership-and-management-for-adult-care/",
+              url: "https://southlondoncollege.org/course/level-5-diploma-in-leadership-and-management-for-adult-care/",
               description: "Senor leadership in care",
               details: {
                 category: "health",
-                certificate: "Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards",
                 learningHours: "551 Guided Learning Hours",
                 credits: "90 Credits",
@@ -764,16 +771,20 @@ echo "</pre>";
           originalPrice: "£1,878",
           savings: "Save £1,190",
           awardingBodies: ["NCFE CACHE", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache:
+            "https://southlondoncollege.org/wp-content/uploads/2024/07/cil-logo-ncfe-cache.png",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121898",
           courses: [
             {
               id: "course_5",
               title: "Level 3 Award in Childcare and Education",
-              url: "/course/ncfe-cache-level-3-award-in-childcare-and-education/",
+              url: "https://southlondoncollege.org/course/ncfe-cache-level-3-award-in-childcare-and-education/",
               description: "Begin a childcare career.",
               details: {
                 category: "teaching",
-                certificate: "Teaching Certificate",
+                certificate: "Award Certificate",
                 awardedBy: "NCFE CACHE",
                 learningHours: "180 Guided Learning Hours (GLH)",
                 credits: "30 Credits",
@@ -787,12 +798,12 @@ echo "</pre>";
               id: "course_6",
               title:
                 "Level 3 Diploma for The Children’s Workforce (Early Years Educator) - RQF",
-              url: "/courses/level-3-education-training",
+              url: "https://southlondoncollege.org/course/level-3-diploma-early-years-educator/",
               description: "Learn the necessities of early years in education",
               details: {
                 category: "teaching",
-                certificate: "Award Certificate",
-                awardedBy: "Pearson (BTEC)",
+                certificate: "Diploma",
+                awardedBy: "Focus Awards",
                 learningHours: "367 Guided Learning Hours",
                 credits: "62 Credits",
                 modules: "03 Number of Modules",
@@ -812,17 +823,21 @@ echo "</pre>";
           originalPrice: "£1,977",
           savings: "Save £1,188",
           awardingBodies: ["Focus Awards", "NCFE", "NCFE"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache:
+            "https://southlondoncollege.org/wp-content/uploads/2024/07/cil-logo-ncfe-cache.png",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121903",
           courses: [
             {
               id: "course_7",
               title: "Level 3 Diploma in Adult Care (RQF)",
-              url: "/course/level-3-diploma-adult-care/",
+              url: "https://southlondoncollege.org/course/level-3-diploma-adult-care/",
               description:
                 "Lead healthcare teams and manage healthcare services with expertise in quality improvement, patient safety, and operational excellence.",
               details: {
                 category: "health",
-                certificate: "Diploma Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards",
                 learningHours: "580 Guided Learning Hours",
                 credits: "58 Credits",
@@ -835,12 +850,12 @@ echo "</pre>";
             {
               id: "course_8",
               title: "Level 2 Functional Skills Qualification in English",
-              url: "/course/ncfe-level-2-functional-skills-qualification-english/",
+              url: "https://southlondoncollege.org/course/ncfe-level-2-functional-skills-qualification-english/",
               description:
                 "Build foundational skills in healthcare support, learning about patient care, safety protocols, and effective communication in clinical settings.",
               details: {
                 category: "teaching and education",
-                certificate: "Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "NCFE",
                 learningHours: "66 Guided Learning Hours",
                 credits: "24 Credits",
@@ -854,12 +869,12 @@ echo "</pre>";
             {
               id: "course_9",
               title: "Level 2 Functional Skills Qualification in Mathematics",
-              url: "/course/ncfe-level-2-functional-skills-qualification-in-mathematics/",
+              url: "https://southlondoncollege.org/course/ncfe-level-2-functional-skills-qualification-in-mathematics/",
               description:
                 "Build foundational skills in healthcare support, learning about patient care, safety protocols, and effective communication in clinical settings.",
               details: {
                 category: "teaching and education",
-                certificate: "Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "NCFE CACHE",
                 learningHours: "55 Guided Learning Hours",
                 credits: "24 Credits",
@@ -879,18 +894,22 @@ echo "</pre>";
           originalPrice: "£3,568",
           savings: "Save £2,279",
           awardingBodies: ["NCFE CACHE", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache:
+            "https://southlondoncollege.org/wp-content/uploads/2024/07/cil-logo-ncfe-cache.png",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121909",
           courses: [
             {
               id: "course_10",
               title:
                 "Level 3 Diploma for Residential Childcare (England) - RQF",
-              url: "/course/ncfe-cache-level-3-diploma-residential-childcare-england/",
+              url: "https://southlondoncollege.org/course/ncfe-cache-level-3-diploma-residential-childcare-england/",
               description:
                 "Advance your teaching career with in-depth knowledge of educational theory, curriculum development, and professional teaching practice.",
               details: {
                 category: "childcare",
-                certificate: "Diploma Certificate",
+                certificate: "Diploma",
                 awardedBy: "NCFE CACHE",
                 learningHours: "466 Guided Learning Hours",
                 credits: "61 Credits",
@@ -904,12 +923,12 @@ echo "</pre>";
               id: "course_11",
               title:
                 "Level 5 Diploma in Leadership for Health and Social Care and Children and Young People’s Services (England) - RQF",
-              url: "/course/level-5-diploma-in-leadership-for-health-and-social-care/",
+              url: "https://southlondoncollege.org/course/level-5-diploma-in-leadership-for-health-and-social-care/",
               description:
                 "Enhance your professional capabilities with training in continuous improvement, reflective practice, and career advancement strategies.",
               details: {
                 category: "childcare",
-                certificate: "Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards",
                 learningHours: "613 Guided Learning Hours",
                 credits: "90 Credits",
@@ -929,18 +948,21 @@ echo "</pre>";
           originalPrice: "£2,158",
           savings: "Save £1,259",
           awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121914",
           courses: [
             {
               id: "course_12",
               title:
                 "Level 3 Diploma for The Children and Young People’s Workforce (RQF)",
-              url: "/course/level-3-diploma-young-peoples-workforce/",
+              url: "https://southlondoncollege.org/course/level-3-diploma-young-peoples-workforce/",
               description:
                 "Develop core administrative and organizational skills essential for supporting business operations and office management roles.",
               details: {
                 category: "Childcare",
-                certificate: "Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards",
                 learningHours: "650 Guided Learning Hours",
                 credits: "65 Credits",
@@ -954,12 +976,12 @@ echo "</pre>";
               id: "course_13",
               title:
                 "Level 3 Diploma for The Children’s Workforce (Early Years Educator) - RQF",
-              url: "/course/level-3-diploma-early-years-educator/",
+              url: "https://southlondoncollege.org/course/level-4-teaching-assistant-course/",
               description:
                 "Learn customer service fundamentals including communication, problem-solving, and building positive customer relationships.",
               details: {
                 category: "Childcare",
-                certificate: "Award Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards",
                 learningHours: "367 Guided Learning Hours",
                 credits: "62 Credits",
@@ -980,18 +1002,21 @@ echo "</pre>";
           originalPrice: "£1,138",
           savings: "Save £1,259",
           awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121935",
           courses: [
             {
               id: "course_14",
               title:
                 "Level 3 Certificate in Supporting Teaching and Learning in Schools (RQF)",
-              url: "/course/level-3-certificate-in-supporting-teaching-and-learning-in-schools/",
+              url: "https://southlondoncollege.org/course/level-3-certificate-in-supporting-teaching-and-learning-in-schools/",
               description:
                 "Develop core administrative and organizational skills essential for supporting business operations and office management roles.",
               details: {
                 category: "Teaching and Education",
-                certificate: "Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "Focus Awards",
                 learningHours: "185 Guided Learning Hours",
                 credits: "32 Credits",
@@ -1005,12 +1030,12 @@ echo "</pre>";
               id: "course_15",
               title:
                 "Level 4 Certificate for Higher Level Teaching Assistants (HLTA) - RQF",
-              url: "/course/level-4-teaching-assistant-course/",
+              url: "https://southlondoncollege.org/course/level-4-teaching-assistant-course/",
               description:
                 "Learn customer service fundamentals including communication, problem-solving, and building positive customer relationships.",
               details: {
                 category: "Teaching and Education",
-                certificate: "Award Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "Focus Awards",
                 learningHours: "108 Guided Learning Hours",
                 credits: "36  Credits",
@@ -1031,18 +1056,21 @@ echo "</pre>";
           originalPrice: "£798",
           savings: "Save £469",
           awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=132187",
           courses: [
             {
               id: "course_16",
               title:
                 "Level 5 Certificate in Teaching English as A Foreign Language (TEFL) - RQF",
-              url: "/course/tefl-level-5-course/",
+              url: "https://southlondoncollege.org/course/tefl-level-5-course/",
               description:
                 "Develop core administrative and organizational skills essential for supporting business operations and office management roles.",
               details: {
                 category: "Teaching and Education",
-                certificate: "Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "Focus Awards",
                 learningHours: "182 Guided Learning Hours",
                 credits: "29 Credits",
@@ -1056,7 +1084,7 @@ echo "</pre>";
               id: "course_17",
               title:
                 "Level 3 Award in Education and Training (AET / PTLLS) - RQF",
-              url: "/course/level-3-award-in-education-training/",
+              url: "https://southlondoncollege.org/course/level-3-award-in-education-training/",
               description:
                 "Learn customer service fundamentals including communication, problem-solving, and building positive customer relationships.",
               details: {
@@ -1081,17 +1109,21 @@ echo "</pre>";
           originalPrice: "£2,597",
           savings: "Save £1,728",
           awardingBodies: ["Focus Awards", "NCFE", "NCFE"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache:
+            "https://southlondoncollege.org/wp-content/uploads/2024/07/cil-logo-ncfe-cache.png",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=121938",
           courses: [
             {
               id: "course_18",
               title:
                 "Level 3 Diploma for The Children’s Workforce (Early Years Educator) (RQF)",
-              url: "/course/tefl-level-5-course/",
+              url: "https://southlondoncollege.org/course/level-3-diploma-early-years-educator/",
               description: "Launch Your Early Years Career",
               details: {
                 category: "Childcare",
-                certificate: "Certificate",
+                certificate: "Diploma",
                 awardedBy: "Focus Awards",
                 learningHours: "367 Guided Learning Hours",
                 credits: "62 Credits",
@@ -1104,14 +1136,14 @@ echo "</pre>";
             {
               id: "course_19",
               title: "Level 2 Functional Skills Qualification in English (RQF)",
-              url: "/course/ncfe-level-2-functional-skills-qualification-english/",
+              url: "https://southlondoncollege.org/course/ncfe-level-2-functional-skills-qualification-english/",
               description: "Basic English for Work",
               details: {
                 category: "Teaching and Education",
-                certificate: "Award Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "NCFE",
                 learningHours: "55 Guided Learning Hours",
-                credits: "",
+                credits: "-",
                 modules: "03 Number of Modules",
                 materials: "Course Materials",
                 tutorSupport: "Tutor Support",
@@ -1122,14 +1154,14 @@ echo "</pre>";
               id: "course_20",
               title:
                 "Level 2 Functional Skills Qualification in Mathematics (RQF)",
-              url: "/course/ncfe-level-2-functional-skills-qualification-english/",
+              url: "https://southlondoncollege.org/course/ncfe-level-2-functional-skills-qualification-in-mathematics/",
               description: "Basic Mathematics for work",
               details: {
                 category: "Teaching and Education",
-                certificate: "Award Certificate",
+                certificate: "Course Certificate",
                 awardedBy: "NCFE",
                 learningHours: "55 Guided Learning Hours",
-                credits: "",
+                credits: "-",
                 modules: "03 Number of Modules",
                 materials: "Course Materials",
                 tutorSupport: "Tutor Support",
@@ -1146,12 +1178,15 @@ echo "</pre>";
           originalPrice: "£2,428.00",
           savings: "Save £1,499.00",
           awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=132062",
           courses: [
             {
               id: "course_21",
               title: "Level 4 Diploma in Advanced Care Practitioner (RQF)",
-              url: "/course/tefl-level-5-course/",
+              url: "https://southlondoncollege.org/course/level-4-diploma-in-advanced-care-practitioner/",
               description: "Higher Adult care career",
               details: {
                 category: "Health and Social Care",
@@ -1168,7 +1203,7 @@ echo "</pre>";
             {
               id: "course_22",
               title: "Level 3 Diploma in Adult Care (RQF)",
-              url: "/course/level-3-award-in-education-training/",
+              url: "https://southlondoncollege.org/course/level-3-diploma-adult-care/",
               description: "Start Adultcare as a beginner",
               details: {
                 category: "Health and Social Care",
@@ -1192,12 +1227,15 @@ echo "</pre>";
           originalPrice: "£2,428.00",
           savings: "Save £1,499.00",
           awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
           url: "https://southlondoncollege.org/checkout/?add-to-cart=122703",
           courses: [
             {
               id: "course_23",
               title: "Level 4 Diploma in Adult Care (RQF)",
-              url: "/course/tefl-level-5-course/",
+              url: "https://southlondoncollege.org/course/level-4-diploma-in-adult-care/",
               description: "Lead in Adult Care",
               details: {
                 category: "Health and Social Care",
@@ -1213,8 +1251,9 @@ echo "</pre>";
             },
             {
               id: "course_24",
-              title: "Level 5 Diploma in Leadership and Management for Adult Care (RQF)",
-              url: "/course/level-3-award-in-education-training/",
+              title:
+                "Level 5 Diploma in Leadership and Management for Adult Care (RQF)",
+              url: "https://southlondoncollege.org/course/ncfe-cache-level-5-diploma-in-leadership-and-management-for-adult-care/",
               description: "Advanced Leadership Qualification in Adult care",
               details: {
                 category: "Health and Social Care",
@@ -1222,6 +1261,414 @@ echo "</pre>";
                 awardedBy: "Focus Awards",
                 learningHours: "315 Guided Learning Hours",
                 credits: "58  Credits",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 12,
+          bundleName: "Teaching and Assessment Quality Assurance Beginner Pack",
+          category: "teaching",
+          price: "£459.00",
+          originalPrice: "£898.00",
+          savings: "Save £439.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132154",
+          courses: [
+            {
+              id: "course_25",
+              title:
+                "Level 3 Award in Education and Training (AET / PTLLS) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-award-in-education-training/",
+              description: "Start your teaching career",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Award Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "48 Guided Learning Hours",
+                credits: "12 Credits",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_26",
+              title:
+                "Level 4 Award in the Internal Quality Assurance of Assessment Processes and Practices (RQF)",
+              url: "https://southlondoncollege.org/course/level-4-iqa-qualification/",
+              description: "Internal Quality Assurer Expert",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Award Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "90 Guided Learning Hours",
+                credits: "12  Credits",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 13,
+          bundleName:
+            "Advanced Teaching and Quality Assesment Professional Pack",
+          category: "teaching",
+          price: "£989.00",
+          originalPrice: "£2,198.00",
+          savings: "Save £1,209.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132148",
+          courses: [
+            {
+              id: "course_27",
+              title:
+                "Level 4 Award in the Internal Quality Assurance of Assessment Processes and Practices (RQF)",
+              url: "https://southlondoncollege.org/course/level-4-iqa-qualification/",
+              description: "Specialise in teaching and QA",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Award Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "90 Guided Learning Hours",
+                credits: "12 Credits",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_28",
+              title:
+                "Level 5 Diploma in Teaching (Further Education and Skills / DIT) - RQF",
+              url: "https://southlondoncollege.org/course/level-5-diploma-in-teaching-dit/",
+              description: "Advanced higher education teaching qualification",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Diploma",
+                awardedBy: "Focus Awards",
+                learningHours: "400 Guided Learning Hours",
+                credits: "120  Credits",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 14,
+          bundleName: "Teaching and Vocational Trainer Starter Kit",
+          category: "teaching",
+          price: "£329.00",
+          originalPrice: "£778.00",
+          savings: "Save £449.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132149",
+          courses: [
+            {
+              id: "course_29",
+              title:
+                "Level 3 Award in Education and Training (AET / PTLLS) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-award-in-education-training/",
+              description: "Specialise in teaching and QA",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Award Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "48 Guided Learning Hours",
+                credits: "12 Credits",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_30",
+              title:
+                "Level 3 Certificate in Assessing Vocational Achievement (CAVA) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-certificate-in-assessing-vocational-achievement/",
+              description: "Advanced higher education teaching qualification",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Course Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "84 Guided Learning Hours",
+                credits: "15  Credits",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 15,
+          bundleName: "Pofessional Teaching and Vocational Trainer Kit",
+          category: "teaching",
+          price: "£959.00",
+          originalPrice: "£2,398.00",
+          savings: "Save £1,439.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132156",
+          courses: [
+            {
+              id: "course_31",
+              title:
+                "Level 4 Certificate in Education and Training (CET / CTLLS) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-award-in-education-training/",
+              description: "Specialise in teaching and QA",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Course Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "48 Guided Learning Hours",
+                credits: "12 Credits",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_32",
+              title:
+                "Level 5 Diploma in Teaching (Further Education and Skills / DIT) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-certificate-in-assessing-vocational-achievement/",
+              description: "Advanced higher education teaching qualification",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Diploma",
+                awardedBy: "Focus Awards",
+                learningHours: "84 Guided Learning Hours",
+                credits: "15  Credits",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 16,
+          bundleName: "Early Year Childcare Foundation Pack",
+          category: "health",
+          price: "£1,299.00",
+          originalPrice: "£1,878.00",
+          savings: "Save £579.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache:
+            "https://southlondoncollege.org/wp-content/uploads/2024/07/cil-logo-ncfe-cache.png",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132156",
+          courses: [
+            {
+              id: "course_33",
+              title: "Level 3 Award in Childcare and Education",
+              url: "https://southlondoncollege.org/course/ncfe-cache-level-3-award-in-childcare-and-education/",
+              description: "Inspire young minds",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Award Certificate",
+                awardedBy: "NCFE CACHE",
+                learningHours: "180 Guided Learning Hours",
+                credits: "-",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_34",
+              title: "Level 3 Diploma in Playwork (NVQ) (RQF)",
+              url: "https://southlondoncollege.org/course/level-3-diploma-in-playwork/",
+              description: "Understand Play Development for Kids",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Diploma",
+                awardedBy: "Focus Awards",
+                learningHours: "477 Guided Learning Hours",
+                credits: "65 Credits",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 17,
+          bundleName: "Complete Assessor Career Kit",
+          category: "health",
+          price: "£429.00",
+          originalPrice: "£1,078.00",
+          savings: "Save £649.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132163",
+          courses: [
+            {
+              id: "course_35",
+              title:
+                "Level 3 Certificate in Assessing Vocational Achievement (CAVA) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-certificate-in-assessing-vocational-achievement/",
+              description: "Beginner to Pro Assesor",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Course Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "84 Guided Learning Hours",
+                credits: "15",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_36",
+              title:
+                "Level 4 Award in the Internal Quality Assurance of Assessment Processes and Practices (RQF)",
+              url: "https://southlondoncollege.org/course/level-4-iqa-qualification/",
+              description: "Learn to Oversee Educational Assessments",
+              details: {
+                category: "Teaching and Education",
+                certificate: "Award Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "90 Guided Learning Hours",
+                credits: "-",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 18,
+          bundleName: "Childcare Leadership Career Bundle",
+          category: "health",
+          price: "£989.00",
+          originalPrice: "£3,078.00",
+          savings: "Save £2,089.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132169",
+          courses: [
+            {
+              id: "course_37",
+              title:
+                "Level 3 Diploma for The Children’s Workforce (Early Years Educator) (RQF)",
+              url: "https://southlondoncollege.org/course/level-3-diploma-early-years-educator/",
+              description: "Lead in Childcare",
+              details: {
+                category: "Health and Social Care",
+                certificate: "Diploma",
+                awardedBy: "Focus Awards",
+                learningHours: "367 Guided Learning Hours",
+                credits: "62",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_38",
+              title:
+                "Level 5 Diploma in Leadership for Health and Social Care and Children and Young People’s Services (England) (RQF)",
+              url: "https://southlondoncollege.org/course/level-5-diploma-in-leadership-for-health-and-social-care/",
+              description: "Leadership in Care",
+              details: {
+                category: "Health and Social Care",
+                certificate: "Diploma",
+                awardedBy: "Focus Awards",
+                learningHours: "613 Guided Learning Hours",
+                credits: "90",
+                modules: "03 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+          ],
+        },
+        {
+          id: 19,
+          bundleName: "Education Assessment Professional Career Pack",
+          category: "teaching",
+          price: "£499.00",
+          originalPrice: "£1,308.00",
+          savings: "Save £809.00",
+          awardingBodies: ["Focus Awards", "Focus Awards"],
+          focus_award:
+            "https://southlondoncollege.org/wp-content/uploads/2025/06/Logo-FocusAwards-640w.jpg",
+          ncfe_cache: "",
+          url: "https://southlondoncollege.org/checkout/?add-to-cart=132175",
+          courses: [
+            {
+              id: "course_39",
+              title:
+                "Level 4 Certificate in Leading the Internal Quality Assurance of Assessment Processes and Practices (RQF)",
+              url: "https://southlondoncollege.org/course/level-4-quality-assurance-certificate/",
+              description: "Become a professional assessor",
+              details: {
+                category: "Health and Social Care",
+                certificate: "Course Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "95 Guided Learning Hours",
+                credits: "17",
+                modules: "04 Number of Modules",
+                materials: "Course Materials",
+                tutorSupport: "Tutor Support",
+                duration: "12 months",
+              },
+            },
+            {
+              id: "course_40",
+              title:
+                "Level 3 Certificate in Assessing Vocational Achievement (CAVA) - RQF",
+              url: "https://southlondoncollege.org/course/level-3-certificate-in-assessing-vocational-achievement/",
+              description: "Oversee Vocational Assesssments",
+              details: {
+                category: "Health and Social Care",
+                certificate: "Course Certificate",
+                awardedBy: "Focus Awards",
+                learningHours: "84 Guided Learning Hours",
+                credits: "15",
                 modules: "03 Number of Modules",
                 materials: "Course Materials",
                 tutorSupport: "Tutor Support",
@@ -1275,15 +1722,11 @@ echo "</pre>";
         <p class="font-semibold mb-3">Awarding bodies:</p>
         <div class="flex items-center gap-3 flex-wrap">
           <img
-            src="https://southlondoncollege.org/wp-content/uploads/2025/11/Frame-2610904.png"
+            src="${bundle.focus_award}"
             class="h-11 object-contain"
           />
           <img
-            src="https://southlondoncollege.org/wp-content/uploads/2025/11/Frame-2610903.png"
-            class="h-11 object-contain"
-          />
-          <img
-            src="https://southlondoncollege.org/wp-content/uploads/2025/11/Frame-2610902.png"
+            src="${bundle.ncfe_cache}"
             class="h-11 object-contain"
           />
         </div>
@@ -1333,7 +1776,7 @@ echo "</pre>";
         const details = course.details;
 
         modalContent.innerHTML = `
-                <div class="bg-gradient-to-r from-orange-400 to-red-400 -m-8 mb-6 p-8 rounded-t-3xl">
+                  <div class="bg-gradient-to-r from-orange-400 to-red-400 -m-8 mb-6 p-8 rounded-t-3xl">
                     <h2 class="text-white font-bold text-2xl md:text-3xl pr-8">${course.title}</h2>
                     <p class="text-white/90 mt-2 text-sm">${details.category}</p>
                 </div>
@@ -1375,13 +1818,13 @@ echo "</pre>";
                                     <p class="text-sm text-gray-800 mt-1">${details.credits}</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+                            <!-- <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
                                 <span class="text-2xl">📚</span>
                                 <div>
                                     <p class="font-semibold text-sm text-gray-500">Modules</p>
                                     <p class="text-sm text-gray-800 mt-1">${details.modules}</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
                                 <span class="text-2xl">📖</span>
                                 <div>
@@ -1493,7 +1936,7 @@ echo "</pre>";
         });
 
       // Initialize
-      renderBundles("business");
+      renderBundles("health");
       updateCountdown();
       setInterval(updateCountdown, 1000);
     </script>
