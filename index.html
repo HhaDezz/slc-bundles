@@ -184,141 +184,148 @@ echo "</pre>";
 
   <body class="bg-[#fff] [font-family:'Bricolage_Grotesque']">
     <!-- Navigation Bar -->
-<nav class="sticky top-0 z-50 bg-white shadow">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
-      <!-- Logo -->
-      <div class="flex-shrink-0 py-2">
-        <a href="https://southlondoncollege.org">
-          <img
-            class="h-14"
-            src="https://southlondoncollege.org/wp-content/uploads/2022/07/slcl-logo.png"
-            alt="SLC Logo"
-          />
-        </a>
-      </div>
-
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button
-          id="menu-btn"
-          class="text-black focus:outline-none focus:ring-2 focus:ring-[#F3BF92] rounded"
-        >
-          <svg
-            id="menu-open-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg
-            id="menu-close-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7 hidden"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Desktop Navigation Links -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a
-          href="https://southlondoncollege.org/all-courses/"
-          class="text-black text-lg font-normal hover:text-gray-700 transition"
-          >Courses</a
-        >
-
-        <button
-          onclick="window.ps.show({ id: 214712 });"
-          class="text-black text-lg font-medium hover:text-gray-700 transition"
-        >
-          Enquire Now →
-        </button>
-
-        <a href="tel:+442081260422">
-          <div
-            class="flex items-center space-x-2 text-black py-3 px-6 rounded-md text-lg font-semibold bg-[#F3BF92] hover:bg-[#e9b17f] transition"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-              ></path>
-            </svg>
-            <span>020 8126 0422</span>
+    <nav class="sticky top-0 z-50 bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0 py-2">
+            <a href="https://southlondoncollege.org">
+              <img
+                class="h-14"
+                src="https://southlondoncollege.org/wp-content/uploads/2022/07/slcl-logo.png"
+                alt="SLC Logo"
+              />
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-4">
-      <a
-        href="https://southlondoncollege.org/all-courses/"
-        class="block text-black text-lg font-normal hover:text-gray-700 transition"
-        >Courses</a
-      >
-      <button
-        onclick="window.ps.show({ id: 214712 });"
-        class="block w-full text-left text-black text-lg font-medium hover:text-gray-700 transition"
-      >
-        Enquire Now →
-      </button>
-      <a href="tel:+442081260422">
-        <div
-          class="flex items-center justify-center space-x-2 text-black py-3 px-6 rounded-md text-lg font-semibold bg-[#F3BF92] hover:bg-[#e9b17f] transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-            ></path>
-          </svg>
-          <span>020 8126 0422</span>
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              class="text-black focus:outline-none focus:ring-2 focus:ring-[#F3BF92] rounded"
+            >
+              <svg
+                id="menu-open-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="menu-close-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop Navigation Links -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="https://southlondoncollege.org/all-courses/"
+              class="text-black text-lg font-normal hover:text-gray-700 transition"
+              >Courses</a
+            >
+
+            <button
+              onclick="window.ps.show({ id: 214712 });"
+              class="text-black text-lg font-medium hover:text-gray-700 transition"
+            >
+              Enquire Now →
+            </button>
+
+            <a href="tel:+442081260422">
+              <div
+                class="flex items-center space-x-2 text-black py-3 px-6 rounded-md text-lg font-semibold bg-[#F3BF92] hover:bg-[#e9b17f] transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <span>020 8126 0422</span>
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
-    </div>
-  </div>
-</nav>
 
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-  const openIcon = document.getElementById("menu-open-icon");
-  const closeIcon = document.getElementById("menu-close-icon");
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-4">
+          <a
+            href="https://southlondoncollege.org/all-courses/"
+            class="block text-black text-lg font-normal hover:text-gray-700 transition"
+            >Courses</a
+          >
+          <button
+            onclick="window.ps.show({ id: 214712 });"
+            class="block w-full text-left text-black text-lg font-medium hover:text-gray-700 transition"
+          >
+            Enquire Now →
+          </button>
+          <a href="tel:+442081260422">
+            <div
+              class="flex items-center justify-center space-x-2 text-black py-3 px-6 rounded-md text-lg font-semibold bg-[#F3BF92] hover:bg-[#e9b17f] transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+              <span>020 8126 0422</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
 
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-    openIcon.classList.toggle("hidden");
-    closeIcon.classList.toggle("hidden");
-  });
-</script>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const openIcon = document.getElementById("menu-open-icon");
+      const closeIcon = document.getElementById("menu-close-icon");
 
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    </script>
 
     <!-- Hero Section -->
     <section>
@@ -331,8 +338,7 @@ echo "</pre>";
             <h1
               class="text-4xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold [font-family:'Glowkin_Demo',sans-serif] text-gray-900 leading-tight"
             >
-              Course bundles tailored for <br />
-              various professional
+              All-in-one Course Bundles. Get fully qualified for less
             </h1>
             <h2
               class="text-4xl sm:text-3xl md:text-4xl lg:text-6xl [font-family:'Rintjany'] text-black italic"
@@ -340,11 +346,12 @@ echo "</pre>";
               field and career paths
             </h2>
             <p class="text-gray-700 text-xl">
-              Explore our all-inclusive course bundles at incredible prices.
-              Everything you need to succeed <br />
-              is conveniently packaged, allowing you to boost your skills and
-              knowledge without overspending.<br />
-              Start your mastery journey now!
+              Take advantage of our exclusive Black Friday Deals on Health and
+              Social Care, Childcare, and Teaching Courses — perfect for anyone
+              ready to become fully qualified and advance their career. Our
+              all-in-one course bundles include everything you need to succeed —
+              from accredited training to expert tutor support — all at
+              unbeatable prices.
             </p>
             <p class="text-gray-700 text-xl"></p>
             <div
@@ -449,7 +456,7 @@ echo "</pre>";
             class="relative mt-10 lg:mt-0 w-full flex justify-center lg:hidden"
           >
             <div
-              class="bg-[#FFE176] p-6 sm:p-8 rounded-[2rem] shadow-inner flex flex-col items-center w-full "
+              class="bg-[#FFE176] p-6 sm:p-8 rounded-[2rem] shadow-inner flex flex-col items-center w-full"
             >
               <p
                 class="text-xl sm:text-2xl font-bold mb-6 italic text-gray-800"
@@ -537,11 +544,13 @@ echo "</pre>";
       <h2
         class="text-4xl md:text-5xl [font-family:'Glowkin_Demo',sans-serif] text-center mb-4"
       >
-        Select Your Journey
+        Custom Course Bundles – Build the Qualification You Need!
       </h2>
-      <p class="text-center text-2xl mb-12 max-w-3xl mx-auto">
-        Explored qualification-based bundles that align with the skills and
-        expertise sought by employers in the job market.
+      <p class="text-center text-xl mb-12 max-w-4xl mx-auto">
+        Explore qualification-based bundles designed to match the skills and
+        expertise employers are looking for in today’s job market. Want
+        something tailored just for you? We can create a custom bundle that fits
+        your career goals and learning needs perfectly.
       </p>
 
       <!-- Category Tabs -->
@@ -589,8 +598,7 @@ echo "</pre>";
       <h2
         class="text-4xl md:text-5xl text-center mb-16 [font-family:'Glowkin_Demo',sans-serif]"
       >
-        Our distinct qualities set us apart<br class="hidden md:block" />
-        from others.
+        Discover the many reasons learners choose to study with us.
       </h2>
 
       <div class="grid md:grid-cols-4 gap-12 md:divide-x divide-gray-200">
@@ -600,9 +608,9 @@ echo "</pre>";
             alt="Accredited Qualifications"
             class="w-14 h-14 mx-auto mb-6"
           />
-          <h3 class="font-semibold text-lg mb-2">Accredited Qualifications</h3>
+          <h3 class="font-semibold text-lg mb-2"> Price Match Guarantee</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Recognised diplomas & certificates that boost your career prospects.
+           We offer a price match guarantee — find the same course for less, and we’ll match it! Get quality education at the best value.
           </p>
         </div>
 
@@ -612,9 +620,9 @@ echo "</pre>";
             alt="Industry-Relevant Skills"
             class="w-14 h-14 mx-auto mb-6"
           />
-          <h3 class="font-semibold text-lg mb-2">Industry-Relevant Skills</h3>
+          <h3 class="font-semibold text-lg mb-2">Flexible Payment Plans</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Curriculum designed with input from industry experts and employers.
+            Spread the cost of your course with affordable monthly instalments. Learn now and pay later, stress-free.
           </p>
         </div>
 
@@ -624,9 +632,9 @@ echo "</pre>";
             alt="Flexible Learning"
             class="w-14 h-14 mx-auto mb-6"
           />
-          <h3 class="font-semibold text-lg mb-2">Flexible Learning</h3>
+          <h3 class="font-semibold text-lg mb-2">Fast Track Option</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Self-paced online study with tutor support whenever you need it.
+           Need your qualification sooner? Choose our fast-track route to complete your course and earn your certificate quicker.
           </p>
         </div>
 
@@ -636,9 +644,11 @@ echo "</pre>";
             alt="Exceptional Value"
             class="w-14 h-14 mx-auto mb-6"
           />
-          <h3 class="font-semibold text-lg mb-2">Exceptional Value</h3>
+         <h3 class="font-semibold text-lg mb-2 whitespace-nowrap">
+  Work Placement Opportunities
+</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Save more with curated bundles that cover your full learning path.
+            Gain hands-on experience through our partner work placements — helping you apply what you learn and enhance your employability.
           </p>
         </div>
       </div>
@@ -2131,7 +2141,6 @@ echo "</pre>";
       updateCountdown1();
       setInterval(updateCountdown, 1000);
       setInterval(updateCountdown1, 1000);
-
     </script>
   </body>
 </html>
