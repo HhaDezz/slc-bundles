@@ -133,13 +133,6 @@ echo "</pre>";
         ]
       }
     </script>
-    <!-- TrustBox script -->
-    <script
-      type="text/javascript"
-      src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-      async
-    ></script>
-    <!-- End TrustBox script -->
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap");
@@ -169,29 +162,6 @@ echo "</pre>";
         color: #f97316;
         text-decoration: underline;
       }
-
-      @keyframes colorChange {
-        0% {
-          background-color: #ff9b42;
-        }
-
-        50% {
-          background-color: #fff200;
-        }
-
-        100% {
-          background-color: #ff9b42;
-        }
-      }
-
-      .animated-button {
-        animation: colorChange 3s ease-in-out infinite;
-      }
-
-      .animated-button:hover {
-        animation: none;
-        background-color: #fff200;
-      }
     </style>
     <!-- Google Tag Manager -->
     <script>
@@ -214,39 +184,77 @@ echo "</pre>";
 
   <body class="bg-[#fff] [font-family:'Bricolage_Grotesque']">
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-[#fff]">
-      <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center">
+    <nav class="sticky top-0 z-50 bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
           <!-- Logo -->
-          <div
-            class="flex-shrink-0"
-            style="max-width: 136px; padding-bottom: 10px; padding-top: 10px"
-          >
-            <div class="flex items-center">
-              <a href="https://southlondoncollege.org">
-                <img
-                  class="skip-lazy no-lazy"
-                  src="https://southlondoncollege.org/wp-content/uploads/2022/07/slcl-logo.png"
-                  data-alt-logo="https://southlondoncollege.org/wp-content/uploads/2022/07/slcl-logo.png"
-                  id="header_logo"
-                  alt="SLC"
-                  width="156"
-                  height="85"
-                />
-              </a>
-            </div>
+          <div class="flex-shrink-0 py-2">
+            <a href="https://southlondoncollege.org">
+              <img
+                class="h-14"
+                src="https://southlondoncollege.org/wp-content/uploads/2022/07/slcl-logo.png"
+                alt="SLC Logo"
+              />
+            </a>
           </div>
-          <!-- Navigation Links -->
-          <div class="hidden md:flex items-center space-x-8">
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
             <button
-              onclick="window.ps.show({ id: 238901 });"
-              class="text-black text-lg font-medium hover:text-gray-700"
+              id="menu-btn"
+              class="text-black focus:outline-none focus:ring-2 focus:ring-[#F3BF92] rounded"
+            >
+              <svg
+                id="menu-open-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="menu-close-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop Navigation Links -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="https://southlondoncollege.org/all-courses/"
+              class="text-black text-lg font-normal hover:text-gray-700 transition"
+              >Courses</a
+            >
+
+            <button
+              onclick="window.ps.show({ id: 214712 });"
+              class="text-black text-lg font-medium hover:text-gray-700 transition"
             >
               Enquire Now →
             </button>
+
             <a href="tel:+442081260422">
               <div
-                class="flex items-center space-x-2 text-black py-3 rounded-md px-8 text-lg font-semibold bg-[#F3BF92]"
+                class="flex items-center space-x-2 text-black py-3 px-6 rounded-md text-lg font-semibold bg-[#F3BF92] hover:bg-[#e9b17f] transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -262,148 +270,287 @@ echo "</pre>";
                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
                   ></path>
                 </svg>
-                <span>020 8126 0476</span>
+                <span>020 8126 0422</span>
               </div>
             </a>
           </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-4">
+          <a
+            href="https://southlondoncollege.org/all-courses/"
+            class="block text-black text-lg font-normal hover:text-gray-700 transition"
+            >Courses</a
+          >
+          <button
+            onclick="window.ps.show({ id: 214712 });"
+            class="block w-full text-left text-black text-lg font-medium hover:text-gray-700 transition"
+          >
+            Enquire Now →
+          </button>
+          <a href="tel:+442081260422">
+            <div
+              class="flex items-center justify-center space-x-2 text-black py-3 px-6 rounded-md text-lg font-semibold bg-[#F3BF92] hover:bg-[#e9b17f] transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+              <span>020 8126 0422</span>
+            </div>
+          </a>
+        </div>
       </div>
     </nav>
 
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const openIcon = document.getElementById("menu-open-icon");
+      const closeIcon = document.getElementById("menu-close-icon");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+    </script>
+
     <!-- Hero Section -->
-    <section class="bg-[#FEF4EB] [font-family:'Bricolage_Grotesque']">
-      <div class="container max-w-7xl mx-auto p-4 sm:py-6 pb-12 lg:pt-6">
+    <section>
+      <div class="bg-[#FEF4EB] [font-family:'Bricolage_Grotesque']">
         <div
-          class="grid grid-cols-1 lg:grid-cols-12 gap-8 justify-between items-center"
+          class="flex flex-col lg:flex-row items-center justify-between max-w-full mx-auto p-6 lg:p-28"
         >
           <!-- Left Content -->
-          <div
-            class="col-span-12 sm:col-span-7 space-y-6 text-center sm:text-left"
-          >
+          <div class="max-w-7xl space-y-6">
             <h1
-              class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold [font-family:'Glowkin_Demo',sans-serif] text-gray-900 leading-tight"
+              class="text-4xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold [font-family:'Glowkin_Demo',sans-serif] text-gray-900 leading-tight"
             >
               All-in-one Course Bundles. Get fully qualified for less
             </h1>
-            <!-- <h2 class="text-4xl sm:text-3xl md:text-4xl lg:text-5xl [font-family:'Rintjany'] text-black italic">
-            field and career paths
-          </h2> -->
-            <p class="text-gray-700 text-lg sm:text-xl">
+            <h2
+              class="text-4xl sm:text-3xl md:text-4xl lg:text-6xl [font-family:'Rintjany'] text-black italic"
+            >
+              field and career paths
+            </h2>
+            <p class="text-gray-700 text-xl">
               Take advantage of our exclusive Black Friday Deals on Health and
-              Social Care, Childcare, and Teaching Courses perfect for anyone
+              Social Care, Childcare, and Teaching Courses — perfect for anyone
               ready to become fully qualified and advance their career. Our
-              all-in-one course bundles include everything you need to succeed
-              from accredited training to expert tutor support all at unbeatable
-              prices.
+              all-in-one course bundles include everything you need to succeed —
+              from accredited training to expert tutor support — all at
+              unbeatable prices.
             </p>
             <p class="text-gray-700 text-xl"></p>
             <div
-              class="flex flex-col sm:flex-row justify-start gap-4 items-center"
+              class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4"
             >
-              <!-- TrustBox widget - Mini -->
-              <div
-                class="trustpilot-widget"
-                data-locale="en-US"
-                data-template-id="53aa8807dec7e10d38f59f32"
-                data-businessunit-id="5f563b9cb628e50001ee3159"
-                data-style-height="150px"
-                data-style-width="100%"
-                data-token="adaa36ca-85e5-4667-b7a2-8b10e5e13710"
-              >
-                <a
-                  href="https://www.trustpilot.com/review/southlondoncollege.org"
-                  target="_blank"
-                  rel="noopener"
-                  >Trustpilot</a
-                >
-              </div>
-              <!-- End TrustBox widget -->
               <button
-                onclick="window.ps.show({ id: 238901 });"
-                class="animated-button rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-all duration-300 text-black px-7 py-4 font-semibold text-xl hover:shadow-orange-600 hover:scale-105"
+                class="relative px-9 py-4 font-semibold bg-black text-black text-xl border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
+              >
+                <span
+                  class="absolute inset-0 bg-[#FF9B42] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#3AE6B3]"
+                ></span>
+                <span class="relative z-10">Explore Courses</span>
+              </button>
+              <button
+                class="group relative px-7 py-4 font-semibold text-black text-xl border-[3px] border-black rounded-full overflow-hidden before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:h-0 before:w-0 before:rounded-full before:bg-[#626262] before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-60 hover:before:w-60"
               >
                 <span class="relative z-10">Talk to an expert</span>
+                <span
+                  class="absolute inset-0 border-[3px] border-black rounded-full translate-x-0.5 -translate-y-0.5"
+                ></span>
               </button>
             </div>
           </div>
           <!-- Right Image and Badges -->
-          <div class="col-span-12 sm:col-span-5 p-5 sm:p-0 hidden lg:block">
+          <div class="relative mt-10 lg:mt-0 hidden lg:block">
             <!-- Countdown Timer -->
-            <img
-              src="https://southlondoncollege.org/wp-content/uploads/2025/11/SLC-HH-img-01-2.webp"
-              alt="Hero Image"
-              class="sm:w-[400px] h-full object-cover w-full"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+            <div
+              class="bg-[#FFE176] p-8 rounded-[2rem] shadow-inner flex flex-col items-center"
+            >
+              <p class="text-2xl font-bold mb-6 italic text-gray-800">
+                Offer ends in:
+              </p>
+              <div
+                class="flex justify-center gap-6 items-center"
+                id="countdown"
+              >
+                <!-- Days -->
+                <div class="text-center">
+                  <div
+                    id="days"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-5xl font-bold w-24 h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    06
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">Days</p>
+                </div>
 
-    <section class="countdown-section">
-      <div
-        class="container max-w-7xl mx-auto flex justify-center items-center mt-[-30px]"
-      >
-        <div
-          class="flex justify-center gap-4 sm:gap-6 items-center"
-          id="countdown"
-        >
-          <!-- Days -->
-          <div class="text-center">
-            <div
-              id="days"
-              class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-2xl sm:text-3xl font-bold w-16 sm:w-16 h-16 sm:h-16 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)]"
-            >
-              06
+                <div class="text-4xl font-bold text-gray-800 self-center">
+                  :
+                </div>
+
+                <!-- Hours -->
+                <div class="text-center">
+                  <div
+                    id="hours"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-5xl font-bold w-24 h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    12
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">Hours</p>
+                </div>
+
+                <div class="text-4xl font-bold text-gray-800 self-center">
+                  :
+                </div>
+
+                <!-- Minutes -->
+                <div class="text-center">
+                  <div
+                    id="minutes"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-5xl font-bold w-24 h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    20
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">
+                    Minutes
+                  </p>
+                </div>
+
+                <div class="text-4xl font-bold text-gray-800 self-center">
+                  :
+                </div>
+
+                <!-- Seconds -->
+                <div class="text-center">
+                  <div
+                    id="seconds"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-5xl font-bold w-24 h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    20
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">
+                    Seconds
+                  </p>
+                </div>
+              </div>
             </div>
-            <p class="mt-3 text-sm font-semibold text-gray-800">Days</p>
           </div>
 
-          <!-- Hours -->
-          <div class="text-center">
+          <!-- timer on mobile -->
+          <div
+            class="relative mt-10 lg:mt-0 w-full flex justify-center lg:hidden"
+          >
             <div
-              id="hours"
-              class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-2xl sm:text-3xl font-bold w-16 sm:w-16 h-16 sm:h-16 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)]"
+              class="bg-[#FFE176] p-6 sm:p-8 rounded-[2rem] shadow-inner flex flex-col items-center w-full"
             >
-              12
-            </div>
-            <p class="mt-3 text-sm font-semibold text-gray-800">Hours</p>
-          </div>
-          <!-- Minutes -->
-          <div class="text-center">
-            <div
-              id="minutes"
-              class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-2xl sm:text-3xl font-bold w-16 sm:w-16 h-16 sm:h-16 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)]"
-            >
-              20
-            </div>
-            <p class="mt-3 text-sm font-semibold text-gray-800">Minutes</p>
-          </div>
+              <p
+                class="text-xl sm:text-2xl font-bold mb-6 italic text-gray-800"
+              >
+                Offer ends in:
+              </p>
+              <div
+                class="flex justify-center gap-4 sm:gap-6 items-center"
+                id="countdown"
+              >
+                <!-- Days -->
+                <div class="text-center">
+                  <div
+                    id="days1"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    06
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">Days</p>
+                </div>
 
-          <!-- Seconds -->
-          <div class="text-center">
-            <div
-              id="seconds"
-              class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-2xl sm:text-3xl font-bold w-16 sm:w-16 h-16 sm:h-16 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)]"
-            >
-              20
+                <div
+                  class="text-2xl sm:text-4xl font-bold text-gray-800 self-center"
+                >
+                  :
+                </div>
+
+                <!-- Hours -->
+                <div class="text-center">
+                  <div
+                    id="hours1"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    12
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">Hours</p>
+                </div>
+
+                <div
+                  class="text-2xl sm:text-4xl font-bold text-gray-800 self-center"
+                >
+                  :
+                </div>
+
+                <!-- Minutes -->
+                <div class="text-center">
+                  <div
+                    id="minutes1"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    20
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">
+                    Minutes
+                  </p>
+                </div>
+
+                <div
+                  class="text-2xl sm:text-4xl font-bold text-gray-800 self-center"
+                >
+                  :
+                </div>
+
+                <!-- Seconds -->
+                <div class="text-center">
+                  <div
+                    id="seconds1"
+                    class="countdown-digit bg-[#2B2B2B] text-[#FDE175] text-3xl sm:text-5xl font-bold w-16 sm:w-24 h-16 sm:h-24 rounded-2xl flex items-center justify-center shadow-[inset_0_-6px_0_rgba(0,0,0,0.3)] relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#444] before:top-1/2 before:left-0"
+                  >
+                    20
+                  </div>
+                  <p class="mt-3 text-sm font-semibold text-gray-800">
+                    Seconds
+                  </p>
+                </div>
+              </div>
             </div>
-            <p class="mt-3 text-sm font-semibold text-gray-800">Seconds</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Course Selection Section -->
-    <section class="max-w-7xl mx-auto px-6 pb-16 pt-6" id="course-list">
+    <section class="max-w-7xl mx-auto px-6 py-16">
       <h2
         class="text-4xl md:text-5xl [font-family:'Glowkin_Demo',sans-serif] text-center mb-4"
       >
         Custom Course Bundles – Build the Qualification You Need!
       </h2>
       <p class="text-center text-xl mb-12 max-w-4xl mx-auto">
-       Explore qualification-based bundles designed to match the skills and expertise employers are looking for in today’s job market.
-Want something tailored just for you? 
-We can create a custom bundle that fits your career goals and learning needs perfectly.
+        Explore qualification-based bundles designed to match the skills and
+        expertise employers are looking for in today’s job market. Want
+        something tailored just for you? We can create a custom bundle that fits
+        your career goals and learning needs perfectly.
       </p>
 
       <!-- Category Tabs -->
@@ -414,12 +561,30 @@ We can create a custom bundle that fits your career goals and learning needs per
         >
           Health & Social Care
         </button>
+        <!-- <button
+          class="px-3 py-2 bg-orange-100 border-2 border-orange-400 rounded-lg"
+          data-category="business"
+        >
+          Business & Management
+        </button> -->
+        <!-- <button
+          class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
+          data-category="accounting"
+        >
+          Accounting & Finance
+        </button> -->
         <button
           class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
           data-category="teaching"
         >
           Teaching & Education
         </button>
+        <!-- <button
+          class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
+          data-category="law"
+        >
+          Law & Ethics Matters
+        </button> -->
       </div>
 
       <!-- Course Cards Grid -->
@@ -443,9 +608,9 @@ We can create a custom bundle that fits your career goals and learning needs per
             alt="Accredited Qualifications"
             class="w-14 h-14 mx-auto mb-6"
           />
-          <h3 class="font-semibold text-lg mb-2">Price Match Guarantee</h3>
+          <h3 class="font-semibold text-lg mb-2"> Price Match Guarantee</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            We offer a price match guarantee — find the same course for less, and we’ll match it! Get quality education at the best value.
+           We offer a price match guarantee — find the same course for less, and we’ll match it! Get quality education at the best value.
           </p>
         </div>
 
@@ -457,7 +622,7 @@ We can create a custom bundle that fits your career goals and learning needs per
           />
           <h3 class="font-semibold text-lg mb-2">Flexible Payment Plans</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-           Spread the cost of your course with affordable monthly instalments. Learn now and pay later, stress-free.
+            Spread the cost of your course with affordable monthly instalments. Learn now and pay later, stress-free.
           </p>
         </div>
 
@@ -469,7 +634,7 @@ We can create a custom bundle that fits your career goals and learning needs per
           />
           <h3 class="font-semibold text-lg mb-2">Fast Track Option</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Need your qualification sooner? Choose our fast-track route to complete your course and earn your certificate quicker.
+           Need your qualification sooner? Choose our fast-track route to complete your course and earn your certificate quicker.
           </p>
         </div>
 
@@ -479,7 +644,9 @@ We can create a custom bundle that fits your career goals and learning needs per
             alt="Exceptional Value"
             class="w-14 h-14 mx-auto mb-6"
           />
-          <h3 class="font-semibold text-sm mb-2">Work Placement Opportunities</h3>
+         <h3 class="font-semibold text-lg mb-2 whitespace-nowrap">
+  Work Placement Opportunities
+</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
             Gain hands-on experience through our partner work placements — helping you apply what you learn and enhance your employability.
           </p>
@@ -501,17 +668,15 @@ We can create a custom bundle that fits your career goals and learning needs per
           questions and provide guidance. Contact us now!
         </p>
         <div class="flex justify-center gap-4">
-          <a
-            href="tel:+442081260422"
+          <button
             class="relative px-9 py-3 font-semibold bg-black text-black text-sm border-[3px] border-black rounded-full overflow-hidden group hover:text-black"
           >
             <span
               class="absolute inset-0 bg-[#FF9B42] rounded-full border-[3px] border-black translate-x-0.5 -translate-y-0.5 transition-colors duration-300 group-hover:bg-[#FFF200]"
             ></span>
             <span class="relative z-10">Call us now</span>
-          </a>
+          </button>
           <button
-            onclick="window.ps.show({ id: 238901 });"
             class="px-8 py-3 border-2 border-gray-900 rounded-full hover:bg-white"
           >
             Enquire now
@@ -521,22 +686,20 @@ We can create a custom bundle that fits your career goals and learning needs per
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#232424] py-20">
-      <div class="container max-w-7xl mx-auto px-4 sm:px-10">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+    <footer class="bg-[#fff] py-8 border-t mt-14 sm:mt-28">
+      <div class="container max-w-7xl mx-auto px-4 sm:px-0">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-between mb-10"
+        >
           <!-- Logo and Social Links -->
           <div class="space-y-6">
-            <a class="navbar-brand flex items-center text-white" href="/">
+            <a class="navbar-brand flex items-center" href="/">
               <img
                 src="https://southlondoncollege.org/wp-content/uploads/2022/07/slcl-logo.png"
                 alt="SLC Logo"
                 class="d-inline-block align-text-top"
               />
             </a>
-            <p class="text-white text-md">
-              We have established a reputation for delivering excellence in
-              online learning.
-            </p>
             <div class="flex space-x-4">
               <a
                 href="https://www.facebook.com/southlondoncollege/"
@@ -595,224 +758,32 @@ We can create a custom bundle that fits your career goals and learning needs per
               </a>
             </div>
           </div>
-          <!-- Top Categories -->
-          <div>
-            <h3 class="text-lg font-semibold mb-3 text-white">
-              Top Categories
-            </h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="https://southlondoncollege.org/course-cat/health-and-social-care/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Health and Social Care</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://southlondoncollege.org/course-cat/teaching-and-education/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Teaching and Education</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://southlondoncollege.org/course-cat/business-management/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Business and Management</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://southlondoncollege.org/course-cat/childcare/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Childcare</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://southlondoncollege.org/course-cat/accounting-finance/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Accounting &amp; Finance</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-lg font-semibold mb-3 text-white">Quick Links</h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="/about-us-new/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >About us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/contact/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Contact us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/terms-and-conditions-new/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Terms and conditions</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/privacy-policy/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >Privacy policy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/faqs/"
-                  class="text-white/90 hover:text-white transition-colors"
-                  >FAQ</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact Us -->
-          <div>
-            <h3 class="text-lg font-semibold mb-3 text-white">Contact us</h3>
-            <ul class="space-y-3 mb-4">
-              <li>
-                <a
-                  href="#"
-                  class="text-white/90 hover:text-white transition-colors flex items-start gap-2"
-                >
-                  <span class="mt-1 flex-shrink-0">
-                    <svg
-                      width="20"
-                      height="24"
-                      viewBox="0 0 20 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 11.5C7.33696 11.5 6.70107 11.2366 6.23223 10.7678C5.76339 10.2989 5.5 9.66304 5.5 9C5.5 8.33696 5.76339 7.70107 6.23223 7.23223C6.70107 6.76339 7.33696 6.5 8 6.5C8.66304 6.5 9.29893 6.76339 9.76777 7.23223C10.2366 7.70107 10.5 8.33696 10.5 9C10.5 9.3283 10.4353 9.65339 10.3097 9.95671C10.1841 10.26 9.99991 10.5356 9.76777 10.7678C9.53562 10.9999 9.26002 11.1841 8.95671 11.3097C8.65339 11.4353 8.3283 11.5 8 11.5ZM8 2C6.14348 2 4.36301 2.7375 3.05025 4.05025C1.7375 5.36301 1 7.14348 1 9C1 14.25 8 22 8 22C8 22 15 14.25 15 9C15 7.14348 14.2625 5.36301 12.9497 4.05025C11.637 2.7375 9.85652 2 8 2Z"
-                        fill="#F2FBFF"
-                      ></path>
-                    </svg>
-                  </span>
-                  <span class="text-sm"
-                    >52 Grosvenor Gardens, London, SW1W 0AU, United
-                    Kingdom</span
-                  >
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+020-8126-0476"
-                  class="text-white/90 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span>
-                    <svg
-                      width="18"
-                      height="19"
-                      viewBox="0 0 18 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.6462 15.3426L12.4128 11.1092C12.3219 11.0193 12.2037 10.9624 12.0768 10.9473C11.9499 10.9322 11.8216 10.96 11.7122 11.026C10.9485 11.488 10.3788 12.2118 10.1091 13.0626C9.9725 13.4901 9.47375 13.686 9.08781 13.4545L9.08187 13.4485L9.07594 13.4426C7.22155 12.3304 5.66968 10.7786 4.5575 8.92418C4.5575 8.91824 4.55156 8.9123 4.55156 8.9123C4.31406 8.52636 4.51 8.02761 4.9375 7.89105C5.79007 7.62467 6.51492 7.05409 6.97406 6.28793C7.11062 6.0623 7.075 5.7773 6.89094 5.5873L2.6575 1.35386C2.56662 1.26401 2.44837 1.20704 2.32146 1.19199C2.19456 1.17693 2.06625 1.20464 1.95687 1.27074C1.4392 1.58132 1.00695 2.01585 0.699103 2.53515C0.391253 3.05446 0.217475 3.64221 0.193437 4.24543V4.25136C0.1875 4.31074 0.1875 4.37011 0.1875 4.42949C0.1875 4.51261 0.193437 4.5898 0.199375 4.66699C0.270033 7.01814 0.942612 9.31186 2.15281 11.3289C3.26312 13.1814 4.81875 14.737 6.67125 15.8473L6.67719 15.8532C8.71969 17.0823 11.0472 17.7532 13.4281 17.8067C13.4756 17.8067 13.5231 17.8126 13.5706 17.8126H13.9031V17.8007C14.4803 17.7518 15.0378 17.5671 15.53 17.2617C16.0222 16.9563 16.4352 16.5387 16.7353 16.0432C16.8659 15.8176 16.8303 15.5267 16.6462 15.3426Z"
-                        fill="#F2FBFF"
-                      ></path>
-                    </svg>
-                  </span>
-                  <span>+020-8126-0476</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/447775185348"
-                  class="text-white/90 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span>
-                    <svg
-                      fill="#F2FBFF"
-                      version="1.1"
-                      id="Capa_1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      width="18px"
-                      height="18px"
-                      viewBox="0 0 30.667 30.667"
-                      xml:space="preserve"
-                      stroke="#F2FBFF"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <g>
-                          <path
-                            d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"
-                          ></path>
-                        </g>
-                      </g>
-                    </svg>
-                  </span>
-                  <span>+44-7775-185348</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:0203 884 1890"
-                  class="text-white/90 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span>
-                    <svg
-                      width="19"
-                      height="21"
-                      viewBox="0 0 19 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.21875 2.625C4.69661 2.625 4.19585 2.83242 3.82663 3.20163C3.45742 3.57085 3.25 4.07161 3.25 4.59375V7.875C2.55381 7.875 1.88613 8.15156 1.39384 8.64384C0.901562 9.13613 0.625 9.80381 0.625 10.5V16.4062C0.625 16.9284 0.832421 17.4292 1.20163 17.7984C1.57085 18.1676 2.07161 18.375 2.59375 18.375H10.4688C10.0418 17.8075 9.81145 17.1164 9.8125 16.4062V9.84375C9.8125 9.10481 10.0566 8.42362 10.4688 7.875H4.5625V4.59375C4.5625 4.4197 4.63164 4.25278 4.75471 4.12971C4.87778 4.00664 5.0447 3.9375 5.21875 3.9375H11.7812C11.9553 3.9375 12.1222 4.00664 12.2453 4.12971C12.3684 4.25278 12.4375 4.4197 12.4375 4.59375V6.62813C12.6501 6.58481 12.8693 6.5625 13.0938 6.5625H13.75V4.59375C13.75 4.07161 13.5426 3.57085 13.1734 3.20163C12.8042 2.83242 12.3034 2.625 11.7812 2.625H5.21875ZM3.90625 11.8125C3.7322 11.8125 3.56528 11.7434 3.44221 11.6203C3.31914 11.4972 3.25 11.3303 3.25 11.1562C3.25 10.9822 3.31914 10.8153 3.44221 10.6922C3.56528 10.5691 3.7322 10.5 3.90625 10.5C4.0803 10.5 4.24722 10.5691 4.37029 10.6922C4.49336 10.8153 4.5625 10.9822 4.5625 11.1562C4.5625 11.3303 4.49336 11.4972 4.37029 11.6203C4.24722 11.7434 4.0803 11.8125 3.90625 11.8125ZM3.90625 14.4375C3.7322 14.4375 3.56528 14.3684 3.44221 14.2453C3.31914 14.1222 3.25 13.9553 3.25 13.7812C3.25 13.6072 3.31914 13.4403 3.44221 13.3172C3.56528 13.1941 3.7322 13.125 3.90625 13.125C4.0803 13.125 4.24722 13.1941 4.37029 13.3172C4.49336 13.4403 4.5625 13.6072 4.5625 13.7812C4.5625 13.9553 4.49336 14.1222 4.37029 14.2453C4.24722 14.3684 4.0803 14.4375 3.90625 14.4375ZM7.1875 11.1562C7.1875 11.3303 7.11836 11.4972 6.99529 11.6203C6.87222 11.7434 6.7053 11.8125 6.53125 11.8125C6.3572 11.8125 6.19028 11.7434 6.06721 11.6203C5.94414 11.4972 5.875 11.3303 5.875 11.1562C5.875 10.9822 5.94414 10.8153 6.06721 10.6922C6.19028 10.5691 6.3572 10.5 6.53125 10.5C6.7053 10.5 6.87222 10.5691 6.99529 10.6922C7.11836 10.8153 7.1875 10.9822 7.1875 11.1562ZM6.53125 14.4375C6.3572 14.4375 6.19028 14.3684 6.06721 14.2453C5.94414 14.1222 5.875 13.9553 5.875 13.7812C5.875 13.6072 5.94414 13.4403 6.06721 13.3172C6.19028 13.1941 6.3572 13.125 6.53125 13.125C6.7053 13.125 6.87222 13.1941 6.99529 13.3172C7.11836 13.4403 7.1875 13.6072 7.1875 13.7812C7.1875 13.9553 7.11836 14.1222 6.99529 14.2453C6.87222 14.3684 6.7053 14.4375 6.53125 14.4375ZM11.125 9.84375C11.125 9.32161 11.3324 8.82085 11.7016 8.45163C12.0708 8.08242 12.5716 7.875 13.0938 7.875H14.4062C14.9284 7.875 15.4292 8.08242 15.7984 8.45163C16.1676 8.82085 16.375 9.32161 16.375 9.84375V16.4062C16.375 16.9284 16.1676 17.4292 15.7984 17.7984C15.4292 18.1676 14.9284 18.375 14.4062 18.375H13.0938C12.5716 18.375 12.0708 18.1676 11.7016 17.7984C11.3324 17.4292 11.125 16.9284 11.125 16.4062V9.84375Z"
-                        fill="#F2FBFF"
-                      ></path>
-                    </svg>
-                  </span>
-                  <span>0203 884 1890</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:inquiry@southlondoncollege.org"
-                  class="text-white/90 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <span>
-                    <svg
-                      width="19"
-                      height="20"
-                      viewBox="0 0 19 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.6665 3.3335H2.33317C1.4165 3.3335 0.674837 4.0835 0.674837 5.00016L0.666504 15.0002C0.666504 15.9168 1.4165 16.6668 2.33317 16.6668H15.6665C16.5832 16.6668 17.3332 15.9168 17.3332 15.0002V5.00016C17.3332 4.0835 16.5832 3.3335 15.6665 3.3335ZM15.3332 6.87516L9.4415 10.5585C9.17484 10.7252 8.82484 10.7252 8.55817 10.5585L2.6665 6.87516C2.58294 6.82826 2.50977 6.76488 2.45141 6.68887C2.39305 6.61287 2.35072 6.52581 2.32698 6.43297C2.30324 6.34013 2.29859 6.24344 2.3133 6.14875C2.32801 6.05406 2.36178 5.96334 2.41257 5.88208C2.46336 5.80082 2.53011 5.73071 2.60878 5.67599C2.68744 5.62127 2.7764 5.58309 2.87025 5.56374C2.9641 5.5444 3.06091 5.5443 3.1548 5.56345C3.24869 5.5826 3.33772 5.62061 3.4165 5.67516L8.99984 9.16683L14.5832 5.67516C14.662 5.62061 14.751 5.5826 14.8449 5.56345C14.9388 5.5443 15.0356 5.5444 15.1294 5.56374C15.2233 5.58309 15.3122 5.62127 15.3909 5.67599C15.4696 5.73071 15.5363 5.80082 15.5871 5.88208C15.6379 5.96334 15.6717 6.05406 15.6864 6.14875C15.7011 6.24344 15.6964 6.34013 15.6727 6.43297C15.649 6.52581 15.6066 6.61287 15.5483 6.68887C15.4899 6.76488 15.4167 6.82826 15.3332 6.87516Z"
-                        fill="#F2FBFF"
-                      ></path>
-                    </svg>
-                  </span>
-                  <span class="[font-family:'arial']">inquiry@southlondoncollege.org</span>
-                </a>
-              </li>
-            </ul>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Phone Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3 text-black">Phone</h3>
+              <a href="tel:+4420-8126-0422" class="text-black hover:text-black">
+                020 8126 0422
+              </a>
+            </div>
+            <!-- Email Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3 text-black">Email</h3>
+              <a
+                href="mailto:info@southlondoncollege.org"
+                class="text-black hover:text-black"
+              >
+                info@southlondoncollege.org
+              </a>
+            </div>
+            <!-- Address Section - Full Width -->
+            <div class="md:col-span-3">
+              <h3 class="text-lg font-semibold mb-3 text-black">Address</h3>
+              <p class="text-black">
+                52 Grosvenor Gardens, London, SW1W 0AU<br />
+                United Kingdom
+              </p>
+            </div>
           </div>
         </div>
         <div class="border-t border-gray-300 pt-4">
@@ -820,7 +791,7 @@ We can create a custom bundle that fits your career goals and learning needs per
             <div
               class="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0"
             >
-              <p class="text-md text-gray-600 text-left text-white">
+              <p class="text-md text-gray-600 text-left text-black">
                 Copyright © 2025 -South London College - All Rights Reserved.
               </p>
               <div class="w-full md:w-auto">
@@ -1954,12 +1925,12 @@ We can create a custom bundle that fits your career goals and learning needs per
       >
         Buy now →
       </a>
-      <button
-        onclick="window.ps.show({ id: 238901 });"
+      <a
+        href="#"
         class="flex-1 text-center border-2 border-gray-900 py-3 rounded-[10px] hover:bg-gray-50 transition font-semibold"
       >
-        Need Help?
-      </button>
+        Customise Yours
+      </a>
     </div>
   </div>
 </div>
@@ -2056,8 +2027,8 @@ We can create a custom bundle that fits your career goals and learning needs per
                             <a href="${course.url}" class="flex-1 bg-black text-white py-3 px-6 rounded-full hover:bg-gray-800 transition font-semibold text-center">
                                 Learn more →
                             </a>
-                            <button onclick="window.ps.show({ id: 238901 });" class="flex-1 border-2 border-gray-900 py-3 px-6 rounded-full hover:bg-white transition font-semibold">
-                                Customise Your Bundle?
+                            <button onclick="handleNeedHelp()" class="flex-1 border-2 border-gray-900 py-3 px-6 rounded-full hover:bg-white transition font-semibold">
+                                Need Help?
                             </button>
                         </div>
                     </div>
@@ -2100,18 +2071,9 @@ We can create a custom bundle that fits your career goals and learning needs per
 
       // Countdown Timer
       function updateCountdown() {
-        const endDate = new Date("2025-11-20T00:00:00").getTime();
+        const endDate = new Date("2025-11-10T00:00:00").getTime();
         const now = new Date().getTime();
         const distance = endDate - now;
-
-        if (distance < 0) {
-          // Countdown has expired
-          document.getElementById("days").textContent = "00";
-          document.getElementById("hours").textContent = "00";
-          document.getElementById("minutes").textContent = "00";
-          document.getElementById("seconds").textContent = "00";
-          return;
-        }
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
@@ -2136,6 +2098,34 @@ We can create a custom bundle that fits your career goals and learning needs per
         ).padStart(2, "0");
       }
 
+      function updateCountdown1() {
+        const endDate = new Date("2025-11-10T00:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days1").textContent = String(days).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("hours1").textContent = String(hours).padStart(
+          2,
+          "0"
+        );
+        document.getElementById("minutes1").textContent = String(
+          minutes
+        ).padStart(2, "0");
+        document.getElementById("seconds1").textContent = String(
+          seconds
+        ).padStart(2, "0");
+      }
+
       // Close modal on outside click
       document
         .getElementById("courseModal")
@@ -2148,57 +2138,9 @@ We can create a custom bundle that fits your career goals and learning needs per
       // Initialize
       renderBundles("health");
       updateCountdown();
+      updateCountdown1();
       setInterval(updateCountdown, 1000);
-    </script>
-    <!-- Brevo Conversations {literal} -->
-    <script>
-      (function (d, w, c) {
-        w.BrevoConversationsID = "5a9d092ebbddbd1b5e03d559";
-        w[c] =
-          w[c] ||
-          function () {
-            (w[c].q = w[c].q || []).push(arguments);
-          };
-        var s = d.createElement("script");
-        s.async = true;
-        s.src = "https://conversations-widget.brevo.com/brevo-conversations.js";
-        if (d.head) d.head.appendChild(s);
-      })(document, window, "BrevoConversations");
-    </script>
-    <!-- /Brevo Conversations {/literal} -->
-    <!--start popupsmart-->
-    <script
-      src="https://cdn.popupsmart.com/bundle.js"
-      data-id="851049"
-      async
-      defer
-    ></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "about": "Online courses for specific groups",
-        "keywords": [
-          "online courses for adults",
-          "online courses to get UCAS points",
-          "online courses for 16-year-olds",
-          "online courses for 17-year-olds",
-          "online courses for teens",
-          "online courses for school leavers",
-          "online courses for jobs",
-          "online courses for kids",
-          "online courses for children",
-          "online courses for teaching assistants",
-          "online courses for seniors",
-          "online courses for childcare",
-          "online courses for nurses",
-          "best Cyber Monday deals on online courses",
-          "Cyber Monday offers on online courses UK",
-          "online learning Cyber Monday deals",
-          "discounted educational courses for Cyber Monday",
-          "online course bundles Cyber Monday sale"
-        ]
-      }
+      setInterval(updateCountdown1, 1000);
     </script>
   </body>
 </html>
