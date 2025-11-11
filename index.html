@@ -62,6 +62,23 @@ echo "</pre>";
         },
       };
     </script>
+        <script>
+  window.onload = function () {
+    // Scroll down by 200px smoothly
+    window.scrollBy({
+      top: 600,
+      behavior: 'smooth'
+    });
+
+    // Wait 1 second, then scroll back up
+    setTimeout(() => {
+      window.scrollBy({
+        top: -600,
+        behavior: 'smooth'
+      });
+    }, 1000); 
+  };
+</script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -281,14 +298,20 @@ echo "</pre>";
             class="col-span-12 sm:col-span-7 space-y-6 text-center sm:text-left"
           >
             <h1
-              class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold [font-family:'Glowkin_Demo',sans-serif] text-gray-900 leading-tight"
+              class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold [font-family:'Glowkin_Demo',sans-serif] text-gray-900 "
             >
-              All-in-one Course Bundles. Get fully qualified for less
+              All-in-one Course Bundles.
+            </h1>
+
+            <h1
+              class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold [font-family:'Glowkin_Demo',sans-serif] text-gray-900 "
+            >
+               Get fully qualified for less!
             </h1>
             <!-- <h2 class="text-4xl sm:text-3xl md:text-4xl lg:text-5xl [font-family:'Rintjany'] text-black italic">
             field and career paths
           </h2> -->
-            <p class="text-gray-700 text-lg sm:text-xl">
+            <p class="text-gray-700 text-sm sm:text-sm">
               Take advantage of our exclusive Black Friday Deals on Health and
               Social Care, Childcare, and Teaching Courses perfect for anyone
               ready to become fully qualified and advance their career. Our
@@ -330,7 +353,7 @@ echo "</pre>";
           <div class="col-span-12 sm:col-span-5 p-5 sm:p-0 hidden lg:block">
             <!-- Countdown Timer -->
             <img
-              src="https://southlondoncollege.org/wp-content/uploads/2025/11/SLC-HH-img-01-2.webp"
+              src="https://southlondoncollege.org/wp-content/uploads/2025/11/SLC-Early-Black-Friday-3.png"
               alt="Hero Image"
               class="sm:w-[400px] h-full object-cover w-full"
             />
@@ -396,15 +419,23 @@ echo "</pre>";
     <!-- Course Selection Section -->
     <section class="max-w-7xl mx-auto px-6 pb-16 pt-6" id="course-list">
       <h2
-        class="text-4xl md:text-5xl [font-family:'Glowkin_Demo',sans-serif] text-center mb-4"
+        class="text-4xl md:text-4xl [font-family:'Glowkin_Demo',sans-serif] text-center mb-4"
       >
-        Custom Course Bundles – Build the Qualification You Need!
+        Custom Course Bundles–Build the Qualification You Need!
       </h2>
-      <p class="text-center text-xl mb-12 max-w-4xl mx-auto">
-       Explore qualification-based bundles designed to match the skills and expertise employers are looking for in today’s job market.
-Want something tailored just for you? 
-We can create a custom bundle that fits your career goals and learning needs perfectly.
-      </p>
+     <p class="text-center text-base sm:text-sm leading-relaxed text-gray-700 mb-7 max-w-4xl mx-auto px-4">
+  <span class="block">
+    Explore <span class="font-semibold text-gray-900">qualification-based bundles</span> designed to match the skills and expertise employers are looking for in today’s job market.
+  </span>
+  <span class="block">
+    Want something <span class="italic text-gray-900">tailored just for you?</span> We can create a <span class="font-semibold text-gray-900">custom bundle</span> that fits your career goals and learning needs perfectly.
+  </span>
+  <span class="block mt-4 text-gray-800 font-medium">
+    Call us: <a href="tel:02081260476" class="text-blue-600 hover:underline">020 8126 0476</a> &nbsp;|&nbsp;WhatsApp: 
+    <a href="https://wa.me/447775185348" class="text-green-600 hover:underline">+44 7775 185348</a>
+  </span>
+</p>
+
 
       <!-- Category Tabs -->
       <div class="flex flex-wrap justify-center gap-4 mb-12 text-sm">
@@ -420,6 +451,12 @@ We can create a custom bundle that fits your career goals and learning needs per
         >
           Teaching & Education
         </button>
+         <button
+          class="px-3 py-2 bg-white border-2 border-gray-300 rounded-lg hover:border-orange-400 transition"
+          data-category="childcare"
+        >
+          Child Care
+        </button>
       </div>
 
       <!-- Course Cards Grid -->
@@ -431,7 +468,7 @@ We can create a custom bundle that fits your career goals and learning needs per
     <!-- Features Section -->
     <section class="max-w-7xl mx-auto px-6 py-20 bg-white rounded-2xl">
       <h2
-        class="text-4xl md:text-5xl text-center mb-16 [font-family:'Glowkin_Demo',sans-serif]"
+        class="text-4xl md:text-4xl text-center mb-16 [font-family:'Glowkin_Demo',sans-serif]"
       >
         Discover the many reasons learners choose to study with us.
       </h2>
@@ -967,7 +1004,7 @@ We can create a custom bundle that fits your career goals and learning needs per
         {
           id: 3,
           bundleName: "Early Years Childcare & Education Bundle",
-          category: "teaching",
+          category: "childcare",
           price: "£689.00",
           originalPrice: "£1,878",
           savings: "Save £1,190",
@@ -1090,7 +1127,7 @@ We can create a custom bundle that fits your career goals and learning needs per
         {
           id: 5,
           bundleName: "Beginner to Advance Childcare Diploma Bundle",
-          category: "teaching",
+          category: "childcare",
           price: "£1289.00",
           originalPrice: "£3,568",
           savings: "Save £2,279",
@@ -1144,7 +1181,7 @@ We can create a custom bundle that fits your career goals and learning needs per
         {
           id: 6,
           bundleName: "Teaching with Childcare Pack",
-          category: "teaching",
+          category: "childcare",
           price: "£899.00",
           originalPrice: "£2,158",
           savings: "Save £1,259",
@@ -1678,7 +1715,7 @@ We can create a custom bundle that fits your career goals and learning needs per
         {
           id: 16,
           bundleName: "Early Year Childcare Foundation Pack",
-          category: "health",
+          category: "childcare",
           price: "£1,299.00",
           originalPrice: "£1,878.00",
           savings: "Save £579.00",
@@ -1779,7 +1816,7 @@ We can create a custom bundle that fits your career goals and learning needs per
         {
           id: 18,
           bundleName: "Childcare Leadership Career Bundle",
-          category: "health",
+          category: "childcare",
           price: "£989.00",
           originalPrice: "£3,078.00",
           savings: "Save £2,089.00",
@@ -2200,5 +2237,6 @@ We can create a custom bundle that fits your career goals and learning needs per
         ]
       }
     </script>
+
   </body>
 </html>
