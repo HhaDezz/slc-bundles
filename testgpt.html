@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced Course Section</title>
+  <!-- TailwindCSS CDN (use your build pipeline in production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Optional: extend Tailwind for a subtle animated gradient
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            shimmer: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '100%': { backgroundPosition: '100% 50%' },
+            },
+          },
+          animation: {
+            shimmer: 'shimmer 10s linear infinite',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white to-slate-50 text-slate-900 antialiased dark:from-slate-900 dark:to-slate-950 dark:text-slate-100">
+  <main class="px-4 py-10 md:py-14">
+    <section class="mx-auto max-w-3xl">
+      <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white/90 shadow-[0_10px_40px_-10px_rgba(2,6,23,0.25)] backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/70">
+        <!-- Header -->
+        <header class="relative -m-px rounded-t-3xl p-px">
+          <div class="relative rounded-t-3xl bg-gradient-to-r from-orange-400 via-rose-400 to-red-500 bg-[length:200%_200%] animate-shimmer">
+            <div class="rounded-t-3xl p-8">
+              <h2 class="text-white font-extrabold text-2xl md:text-3xl tracking-tight drop-shadow-sm pr-10">${course.title}</h2>
+              <p class="text-white/90 mt-2 text-sm font-medium">${details.category}</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- Body -->
+        <div class="space-y-8 p-6 md:p-8">
+          <!-- Course Description -->
+          <section aria-labelledby="course-description" class="rounded-xl border border-blue-200/60 bg-blue-50/60 p-5 dark:border-blue-900/40 dark:bg-blue-950/30">
+            <h3 id="course-description" class="sr-only">Course description</h3>
+            <p class="text-slate-700 leading-relaxed dark:text-slate-200">${course.description}</p>
+          </section>
+
+          <!-- What's Included -->
+          <section aria-labelledby="whats-included">
+            <div class="flex items-center justify-between gap-3">
+              <h3 id="whats-included" class="font-bold text-xl md:text-2xl tracking-tight">What’s Included</h3>
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Ofqual & More</span>
+            </div>
+
+            <ul class="mt-4 grid gap-4 md:grid-cols-2">
+              <!-- Item -->
+              <li class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>🎓</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">Ofqual Regulated</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.certificate}</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>🏆</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">Awarded By</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.awardedBy}</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="group rounded-2xl border border-slate-200 bg-slate-200/40 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>⏱️</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">Learning Hours</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.learningHours}</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>✏️</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">Credits</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.credits}</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>📖</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">Interactive Learning Content</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.materials}</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>👨‍🏫</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">One‑to‑One Mentor Support</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.tutorSupport}</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md focus-within:-translate-y-0.5 focus-within:shadow-md dark:border-slate-800 dark:bg-slate-800/40 dark:hover:bg-slate-800/70 md:col-span-2">
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden>📅</span>
+                  <div>
+                    <p class="font-semibold text-[13px] uppercase tracking-wide text-slate-500">Standard or Fast‑Track Learning</p>
+                    <p class="mt-1 text-sm text-slate-900 dark:text-slate-100">${details.duration}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Calls to Action -->
+          <section class="rounded-2xl border-2 border-slate-200 bg-gradient-to-r from-slate-50 to-slate-100 p-6 dark:border-slate-800 dark:from-slate-800/40 dark:to-slate-800/60">
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a href="${course.url}"
+                 class="flex-1 rounded-full bg-slate-900 py-3 px-6 text-center font-semibold text-white shadow hover:shadow-lg hover:bg-black/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:bg-white dark:text-slate-900 dark:hover:bg-white/90"
+                 aria-label="Learn more about ${course.title}">
+                Learn more →
+              </a>
+              <button type="button"
+                      onclick="window.ps && window.ps.show ? window.ps.show({ id: 238901 }) : alert('Customizer coming soon!');"
+                      class="flex-1 rounded-full border-2 border-slate-900 py-3 px-6 text-center font-semibold text-slate-900 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:border-white dark:text-white dark:hover:bg-transparent/10">
+                Customise Your Bundle?
+              </button>
+            </div>
+            <p class="mt-3 text-center text-xs text-slate-500">Secure checkout • Instant enrolment • Study at your pace</p>
+          </section>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
